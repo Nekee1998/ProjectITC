@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <title> Moupage6</title>   
+       <link rel="stylesheet" href="text.css">
+    </head>
+    <body>
+       <section>
+           <header>
+        <a href="#"><image src="Mou.png"  class="logo"></a> 
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page1.html">Product</a></li>
+            <li><a href="page2.html">Googlepatent</a></li>
+            <li><a href="page3.html">Problem</a></li>
+            <li><a href="page4.html">Solution</a></li>
+            <li><a href="page5.html">Timeline</a></li>
+            <li class= "active"><a href="page6.html">Data Graph</a></li>
+            <li><a href="page7.html">Creator</a></li>
+        </ul>
+           </header>
+
+
+
+        <div class="charthead">
+             <!-- Chart -->
+          <div class="chartbox">
+            <canvas id="pieChart1"></canvas>
+          </div>
+
+          
+          <div class="chartbox">
+            <canvas id="pieChart2"></canvas>
+          </div>
+
+          <div class="chartbox">
+            <canvas id="myChart"></canvas>
+          </div>
+       
+          <div class="chartbox">
+            <canvas id="myChart1"></canvas>
+          </div>
+
+
+          <div class="chartbox">
+            <canvas id="myChart2"></canvas>
+          </div>
+           <div class="chartbox">
+                <canvas id="pieChart3"></canvas>
+            </div>
+        
+          <div class="chartbox">
+            <canvas id="pieChart4"></canvas>
+          </div>
+
+          <div class="chartbox">
+            <canvas id="pieChart5"></canvas>
+          </div>
+
+
+          <div class="chartbox">
+            <canvas id="pieChart6"></canvas>
+          </div>
+           
+          <div class="chartbox">
+            <canvas id="pieChart7"></canvas>
+          </div>
+
+        </div>
+
+          
+
+
+
+
+
+
+
+
+
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <script>
+/////////////////////////////
+               //pie1
+        const datapie1 = {
+            labels: ['No', 'Yes', "#does the information complete"],
+            datasets: [{
+                label: '# of Votes',
+                data: [14, 17],
+                backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(75, 192, 192, 1)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    };
+
+
+       const configpie1 = {
+                type: 'pie',
+                data: datapie1,
+                options: {}
+           };
+             //render init pie2 block
+             const pieChart1 = new Chart(
+                 document.getElementById('pieChart1'),
+                 configpie1
+             );
+             
+
+  
+///////////////////////////////////
+                       //pie2
+        const datapie2 = {
+            labels: ['No', 'Yes', "#does the location of navigation tools is convenien"],
+            datasets: [{
+                label: '# of Votes',
+                data: [2, 29],
+                backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(75, 192, 192, 1)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+
+     };   
+                 
+             //configpie2
+             const configpie2 = {
+                type: 'pie',
+                data: datapie2,
+                options: {}
+           };
+             //render init pie2 block
+             const pieChart2 = new Chart(
+                 document.getElementById('pieChart2'),
+                 configpie2
+             );
+             
+/////////////////
+                          //setup
+            const data = {
+            labels: ['verypoor', 'below average', 'average', 'above average', 'Exellent'],
+            datasets: [{
+                label: '# Votes of is there uniqueness of the content',
+                data: [0, 3, 13, 9, 6],
+                backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)'      
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)'
+            ],
+            borderWidth: 1
+        }]
+    };
+                //config
+                const config = {
+                type: 'bar',
+                data,
+                options: {
+                scales:  {
+                y: {
+                beginAtZero: true
+            }
+        }
+    }
+};
+                //render init block 
+                const myChart =  new Chart(
+                document.getElementById('myChart'),
+                config
+                );
+////////////////
+              //chart1
+              //setup
+             const Chart1= {
+            labels: ['verypoor', 'below average', 'average', 'above average', 'Exellent'],
+            datasets: [{
+                label: '# Votes of is the content reliable (true information)',
+                data: [0, 2, 11, 10, 8],
+                backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)'      
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)'
+            ],
+            borderWidth: 1
+        }]
+    };
+                //config
+                const configChart1 = {
+                type: 'bar',
+                data: Chart1,
+                options: {}
+};
+                //render init block 
+                const myChart1 =  new Chart(
+                document.getElementById('myChart1'),
+                configChart1
+                );
+
+///////////////
+
+           const Chart2= {
+            labels: ['verypoor', 'below average', 'average', 'above average', 'Exellent'],
+            datasets: [{
+                label: '# Votes of is the content readable?',
+                data: [0, 1, 5, 13, 12],
+                backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)'      
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)'
+            ],
+            borderWidth: 1
+        }]
+    };
+                //config
+                const configChart2 = {
+                type: 'bar',
+                data: Chart2,
+                options: {}
+};
+                //render init block 
+                const myChart2 =  new Chart(
+                document.getElementById('myChart2'),
+                configChart2
+                );
+//////////////pie 3
+
+                //pie3
+        const datapie3 = {
+            labels: ['No', 'Yes', "#does the location of navigation tools is convenien"],
+            datasets: [{
+                label: '# of Votes',
+                data: [1, 30],
+                backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(75, 192, 192, 1)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+
+     };   
+                 
+             //configpie3
+             const configpie3 = {
+                type: 'pie',
+                data: datapie3,
+                options: {}
+           };
+             //render init pie3 block
+             const pieChart3 = new Chart(
+                 document.getElementById('pieChart3'),
+                 configpie3
+             );
+                ////////////////
+                               //pie4
+        const datapie4 = {
+            labels: ['No', 'Yes', "# vote of the loading fast"],
+            datasets: [{
+                label: '# of Votes',
+                data: [1, 30],
+                backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(75, 192, 192, 1)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+
+     };   
+                 
+             //configpie4
+             const configpie4 = {
+                type: 'pie',
+                data: datapie4,
+                options: {}
+           };
+             //render init pie4 block
+             const pieChart4 = new Chart(
+                 document.getElementById('pieChart4'),
+                 configpie4
+             );
+                
+            //////////Pie5
+
+
+            const datapie5 = {
+            labels: ['No', 'Yes', "# vote of does the information is in-time/updated"],
+            datasets: [{
+                label: '# of Votes',
+                data: [1, 30],
+                backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(75, 192, 192, 1)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+
+     };              
+             const configpie5 = {
+                type: 'pie',
+                data: datapie5,
+                options: {}
+           };
+             const pieChart5 = new Chart(
+                 document.getElementById('pieChart5'),
+                 configpie5
+             );
+                
+
+            ////////Pie6
+
+            const datapie6 = {
+            labels: ['No', 'Yes', "# vote of the website is compatible to any browser"],
+            datasets: [{
+                label: '# of Votes',
+                data: [3, 27],
+                backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(75, 192, 192, 1)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+
+     };              
+             const configpie6  = {
+                type: 'pie',
+                data: datapie6,
+                options: {}
+           };
+             const pieChart6 = new Chart(
+                 document.getElementById('pieChart6'),
+                 configpie6
+             );
+            //////Pie7
+            
+            const datapie7 = {
+            labels: ['No', 'Yes', "# vote of does the graphics details/clear"],
+            datasets: [{
+                label: '# of Votes',
+                data: [2, 29],
+                backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(75, 192, 192, 1)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+
+     };              
+             const configpie7  = {
+                type: 'pie',
+                data: datapie7,
+                options: {}
+           };
+             const pieChart7 = new Chart(
+                 document.getElementById('pieChart7'),
+                 configpie7
+             );                 
+            </script>
+
+       </section>
+    </body>
+</html>

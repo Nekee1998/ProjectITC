@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <title>  Mou  </title>   
+       <link rel="stylesheet" href="text.css">
+    </head>
+    <body>
+       <section id="back1">
+           <div class="circle"></div>
+           <header>
+        <a href="#"><image src="Mou.png"  class="logo"></a> 
+        <ul>
+            <li class= "active"><a href="index.html">Home</a></li>
+            <li><a href="page1.html">Product</a></li>
+            <li><a href="page4.html">Googlepatent</a></li>
+            <li><a href="page2.html">Problem</a></li>
+            <li><a href="page3.html">Solution</a></li>
+            <li><a href="page5.html">Timeline</a></li>
+            <li><a href="page6.html">Data Graph</a></li>
+            <li><a href="page7.html">Creator</a></li>
+        </ul>
+        </header>
+          <div class="slogan">
+          <div class="text">
+                   <h1>Can keep freeze <span></span></h1>
+                   <h1>and cool with<span></span></h1>
+                   <h1> Mou <span></span></h1>
+               <a href="page1.html">Learn More</a>
+          </div>
+          <div class="image">
+          <img src="1.png" class="one">
+        </div>
+        </div>
+        <ul class="pics">
+            <li><img src="pic1.ico" onclick="imgSlider('1.png')"></li>
+            <li><img src="pic2.ico" onclick="imgSlider('2.png')"></li>
+            <li><img src="pic3.ico" onclick="imgSlider('3.png')"></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+          function imgSlider(anything){
+        document.querySelector('.one').src=anything;
+        }
+
+    </script>
+   </body>
+</html>

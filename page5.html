@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <title> Moupage5</title>   
+       <link rel="stylesheet" href="text.css">
+    </head>
+    <body>
+       <section>
+           <header>
+        <a href="#"><image src="Mou.png"  class="logo"></a> 
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page1.html">Product</a></li>
+            <li><a href="page2.html">Googlepatent</a></li>
+            <li><a href="page3.html">Problem</a></li>
+            <li><a href="page4.html">Solution</a></li>
+            <li class= "active"><a href="page5.html">Timeline</a></li>
+            <li><a href="page6.html">Data Graph</a></li>
+            <li><a href="page7.html">Creator</a></li>
+        </ul>
+           </header> 
+           <div class="Motherchart">
+
+            <div class="chartMenu">
+             <p>Timeline of creation and deployment</p>
+           </div>
+ 
+           <div class="chartCard">
+             <div class="chartBox">
+               <canvas id="myChart"></canvas>
+             </div>
+           </div>
+         </div>
+           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+           
+           <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+            
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js" 
+           integrity="sha512-R/QOHLpV1Ggq22vfDAWYOaMd5RopHrJNMxi8/lJu8Oihwi4Ho4BRFeiMiCefn9rasajKjnx9/fTQ/xkWnkDACg==" 
+           crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+           <script>
+           // setup 
+           const data = {
+             labels: ['Creating of wed', 'product design', 'Googlepatent', 'coding page7 and 5', 'problem and solution', 'gantt chart', 'survey chart','video'],
+             datasets: [{
+               label: 'project',
+               data: [
+                 ['2021-11-19','2021-11-25'],
+                 ['2021-11-26','2021-11-30'],
+                 ['2021-12-01','2021-12-02'],
+                 ['2021-12-03','2021-12-05'],
+                 ['2021-12-05','2021-12-06'],
+                 ['2021-12-06','2021-12-07'],
+                 ['2021-12-08','2021-12-09'],
+                 ['2021-12-09','2021-12-10'],
+             ],
+               taskCompleted: [0, 0, 0, 0, 0, 0, 0, 0],
+               backgroundColor: ['rgba(0, 0, 0, 0.2)'
+               ],
+               borderColor: ['rgba(0, 0, 0, 1)'
+               ],
+               borderWidth: 1,
+               borderSkipped:false,
+             },{
+               label: 'actual time',
+               data: [
+                 ['2021-11-19','2021-11-25'],
+                 ['2021-11-26','2021-11-30'],
+                 ['2021-12-01','2021-12-02'],
+                 ['2021-12-03','2021-12-05'],
+                 ['2021-12-05','2021-12-06'],
+                 ['2021-12-06','2021-12-07'],
+                 ['2021-12-08','2021-12-09'],
+                 ['2021-12-09','2021-12-10'],
+             ],
+               taskCompleted: [100, 100, 100, 100, 100, 100, 100, 100],
+               backgroundColor: [ 'rgba(255, 26, 104, 0.2)',
+               ],
+               borderColor: [ 'rgba(255, 26, 104, 1)',
+               ],
+               borderWidth: 1,
+               borderSkipped:false,
+             }
+            ]
+           };
+       
+          // config 
+          const config = {
+            type: 'bar',
+            data,
+            options: {
+              plugins:  {
+                tooltip: {
+                  filter: (tooltipItem) => {
+                    return tooltipItem.datasetIndex === 1;
+                  },
+                  yAlign: 'bottom',
+                  callbacks: {
+                    label: (context) => {
+                     const taskPercentage = context.dataset.taskCompleted[context.dataIndex
+                    ];
+                      const completedDate = new Date(context.parsed.x);
+                      const cleanedDate = completedDate.getFullYear() + '/' + (completedDate.getMonth + 1) + '/' 
+                      completedDate.getDate();
+                      console.log(cleanedDate)
+                    }
+                  }     
+                },
+                datalabels: {
+                  formatter: (value, context) => {
+                       //console.log(context.dataIndex)
+                      const taskPercentage = context.dataset.taskCompleted[context.dataIndex];
+                       return `${taskPercentage}%`;
+                  }
+                }
+              },
+              indexAxis:'y',
+              scales: {
+                x: {
+                  min:'2021-11-19',
+                  position:'top',
+                  type: 'time',
+                  time: {
+                     unit: 'day'
+                  }
+                },
+                y: {
+                  beginAtZero: true
+                }
+              }
+            },
+            plugins: [ChartDataLabels]
+          };
+      
+          // render init block
+          const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+          );
+          </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       </section>
+    </body>
+</html>

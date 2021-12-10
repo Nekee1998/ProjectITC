@@ -1,0 +1,505 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Permanent+Marker&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lobster', cursive;
+}
+/*body and top*/
+#back1{
+    background-image: url(backm.jpg);
+}
+section
+{
+    position: relative;
+    width: 100%;
+    
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: darkslategrey;
+}
+header .logo
+{
+    position: relative;
+    max-width: 100px;
+}
+header ul
+{
+ position: relative;
+ display: flex;
+}
+header ul li 
+{
+    list-style: none;
+}
+header ul li a
+{
+    display: inline-block;
+    color: white;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+}
+/*text area of slogan*/
+.slogan
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px; 
+}
+.slogan .text
+{
+    position: relative;
+    max-width: 600px;
+}
+.slogan  h1{   
+    display: block; 
+    color: transparent;
+    font-size: 4rem;
+    line-height: 1.4em;
+    animation: text_reveal1 .5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+/*animation*/
+.slogan .text h1:nth-child(1){
+        animation-delay: 1s;
+}
+ .slogan .text h1:nth-child(2){
+    animation-delay: 2s;
+} 
+.slogan .text h1:nth-child(3){
+    animation: text_reveal_name1 .5s ease forwards;
+    animation-delay: 3s;
+} 
+.slogan .text h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: darkslategrey;
+    animation: text_reveal_box1;
+    animation-delay: .3s;
+}
+.slogan .text h1:nth-child(1) span{
+     animation-delay:.5s;
+}
+.slogan .text h1:nth-child(1) span{
+    animation-delay: 1.5s;
+}
+.slogan .text h1:nth-child(1) span{
+    animation-delay: 2.5s;
+} 
+@keyframes text_reveal_box1{
+   50%{
+       width: 100%;
+       left: 0;
+   }
+   100%{
+       width: 0;
+       left: 100%;
+   }
+}
+ 
+@keyframes text_reveal1{
+    100%{
+       color:gold;
+    }
+}
+@keyframes text_reveal_name1{
+    100%{
+        color:lightpink;
+        font-weight: 500;
+    }
+}
+
+
+
+/*end of animation*/
+
+
+.slogan .text a
+{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: cornflowerblue;
+    color: black;
+    border-radius: 40px;
+    font-weight: 500; 
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.slogan .text a:hover
+{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: cornflowerblue;
+    color: white;
+    border-radius: 40px;
+    font-weight: 500; 
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+.slogan .image
+{
+    width: 600px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 60px;
+    height: 740px;
+     
+}
+.slogan .image img
+{
+   
+    padding-top: 95px;
+    padding-bottom: 18%;
+}
+.pics
+{ 
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+    
+}
+.pics li
+{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.pics li:hover
+{
+    transform: translateY(-15px);
+}
+.pics li  img
+{
+    max-width: 60px;
+}
+.circle
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: cornflowerblue;
+    clip-path:circle(650px at right 900px);
+}
+/*links area*/
+.active, header ul li:hover
+{ 
+    display: inline-block;
+    margin-top: 5px;
+    padding: 8px 20px;
+    background: cornflowerblue;
+    border-radius: 40px;
+    font-weight: 500; 
+    letter-spacing: 1px;
+    text-decoration: none; 
+} 
+.active, header ul li:active
+{ 
+    display: inline-block;
+    margin-top: 5px;
+    padding: 8px 20px;
+    background: hotpink;
+    border-radius: 40px;
+    font-weight: 500; 
+    letter-spacing: 1px;
+    text-decoration: none; 
+} 
+/*code for page one*/
+#hero1{
+    background-image: url(back1.jpg);
+    background-size: cover;
+    position: relative;
+    background-position: top center;
+    padding: 15%;
+    
+}
+.Product{
+    margin-left: 150px;
+    padding-right: 20px; 
+    padding-top: 50px; 
+    justify-content: flex-start;
+}
+.Product .inside{
+    height: 400px;
+    width: 500px;
+    display: inline-block;
+}
+
+
+.textbox1 p{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: white;
+    font-size: 20px;
+    
+}
+.textbox1 span{
+
+    color: white;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 1000;
+}
+.inside{
+    width: 600px;
+    display: flex;
+    height: 500px;
+}
+
+/*code for page two*/
+.list2{
+    
+    padding-top: 100px;
+}
+.list2 li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    align-items: center;
+    margin: 25px;
+}    
+
+/*code for page three*/
+
+.list3{
+    padding-top: 100px;
+    margin-left: 500px;
+    
+}
+.list3 li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin: 25px; ;
+}
+/*code for page four*/
+.text4
+{
+text-align: center;
+padding-top: 50px;
+
+}
+.textbox4
+{
+    position: relative;  
+}
+.text4 .textbox4 h1 
+{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.text4 .textbox4 h2
+{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif
+}
+.text4 .textbox4 span
+{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 90%; 
+    font-weight: 1000;
+}
+
+.text4 .textbox4 .image4{
+    height: 700px;
+    padding-top: 10%;
+}
+.text4 .textbox4 p
+{
+ font-size: 15px;
+ font-family: Arial, Helvetica, sans-serif;
+}
+.text4 .textbox4 a
+{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: cornflowerblue;
+    color: black;
+    border-radius: 40px;
+    font-weight: 500; 
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+/*code for page five*/
+
+.Motherchart{
+    width: 1000px;
+    padding-top: 10%;
+    height: 800px;
+}
+
+
+
+
+
+/*six page*/
+
+.charthead{
+    width: 400px;
+    padding-top: 5%;
+    justify-content: space-between;
+    display:inline-block;
+    padding-left: 35%;
+}
+
+.chartbox{
+    width: 500px;
+    padding: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+/*code for page seven*/
+
+.page7{
+ padding-top: 5%;
+ margin: 0;
+}
+
+.Pic7{
+    height: 400px;
+}
+.page7 .page7box h1{
+    font-family: 'Permanent Marker', cursive;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+
+}
+.page7 h1{
+    display: block;
+    width: fit-content;
+    font-size: 3rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+} 
+/*animation*/
+.page7 .page7box h1:nth-child(1){
+    animation-delay: 1s;
+}
+.page7 .page7box h1:nth-child(2){
+    animation-delay: 2s;
+}
+.page7 .page7box h1:nth-child(3){
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+}
+.page7 .page7box h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: cornflowerblue;
+    animation: text_reveal_box .9s ease;
+    animation-delay:.3s;
+}
+.page7 .page7box h1:nth-child(1) span{
+        animation-delay: .5s;
+    }
+.page7 .page7box h1:nth-child(2) span{
+        animation-delay: 1.5s;
+    }
+.page7 .page7box h1:nth-child(3) span{
+        animation-delay: 2.5s;
+    }
+
+@keyframes text_reveal_box{
+    50%{
+         width: 100%;
+         left: 0;
+        }
+100%{
+      width: 0;
+      left: 100%;
+    }
+
+}
+@keyframes text_reveal{
+    100%{
+        color:darkslategrey;
+    }
+
+}
+@keyframes text_reveal_name {
+    100%{
+        color:black;
+        font-weight: 500;
+    }
+}
+
+/*end of animation*/
+.page7 .page7box{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+.page7 .page7box .cta{
+    font-family: 'Permanent Marker', cursive;
+    display: inline-block;
+    padding: 10px 30px;
+    color:black;
+    background-color: transparent;
+    border: 2px solid cornflowerblue;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-top: 30px;
+    transition: .3s ease;
+}
+.page7 .page7box .cta:hover{
+    color: white;
+    background-color: cornflowerblue;
+}
+
+.para7{
+    padding: 15px;
+    font-size: 19px;
+    color: black;
+    
+}
